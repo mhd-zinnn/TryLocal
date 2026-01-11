@@ -257,4 +257,5 @@ The website is still in development and constantly improving for the best user e
 ---
 
 ## Screenshots
-Screenshots of the developing website are attached below.
+Screenshots of the developing website is attached along with other files.
+
