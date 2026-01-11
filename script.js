@@ -12,7 +12,7 @@ const products = [
     { id: 11, name: "Kids Cotton Romper", category: "kids", fabric: "Cotton", priceRange: "₹500 – ₹800", shop: "Little Stars", phone: "919000000011", img: "idk", sizes: "2T, 3T, 4T", colors: "Yellow" },
     { id: 12, name: "Toddler Denim Overalls", category: "kids", fabric: "Denim", priceRange: "₹900 – ₹1,300", shop: "Junior Style", phone: "919000000012", img: "images/TDO.jpg", sizes: "4, 6, 8", colors: "Classic Blue" },
     { id: 13, name: "Girls Silk Frock", category: "kids", fabric: "Silk", priceRange: "₹1,500 – ₹2,200", shop: "Princess Wear", phone: "919000000013", img: "", sizes: "6, 8, 10", colors: "Purple" },
-    { id: 14, name: "Boys Linen Vest", category: "kids", fabric: "Linen", priceRange: "₹700 – ₹1,100", shop: "Tiny Trends", phone: "919000000014", img: "images/BLV.jpg", sizes: "8, 10", colors: "Grey" },
+    { id: 14, name: "Boys Linen Vest", category: "kids", fabric: "Linen", priceRange: "₹700 – ₹1,100", shop: "Tiny Trends", phone: "919000000014", img: "https://ibb.co/1S6j5BS", sizes: "8, 10", colors: "Grey" },
     { id: 15, name: "Mandarin Collar Shirt", category: "men", fabric: "Cotton", priceRange: "₹800 – ₹1,200", shop: "Vogue Menswear", phone: "919000000006", img: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=600", sizes: "M, L", colors: "White" },
     { id: 16, name: "Silk Wrap Blouse", category: "women", fabric: "Silk", priceRange: "₹1,800 – ₹2,600", shop: "Grace Boutique", phone: "919000000003", img: "images/SWB.jpg", sizes: "S, M", colors: "Champagne" },
     { id: 19, name: "Casual Linen Blazer", category: "men", fabric: "Linen", priceRange: "₹3,500 – ₹5,500", shop: "Modern Menswear", phone: "919000000009", img: "", sizes: "L, XL", colors: "Charcoal" },
@@ -402,5 +402,6 @@ function openInsightsModal() {
 function closeInsightsModal() {
     document.getElementById('insightsModal').classList.add('hidden');
 }
+
 
 render(products);
