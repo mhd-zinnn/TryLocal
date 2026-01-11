@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryLocal | Professional Textile Network</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+
+
+    <header class="main-header">
+        <div class="container header-nav">
+            <div class="logo" onclick="window.location.reload()">
+                <span>Try<span class="orange">Local</span></span>
+            </div>
+            <nav class="desktop-nav">
+                <div class="location-pill">
+                    <span class="location-icon">📍</span>
+                    <span id="userLocation">Angamaly, Kerala</span>
+                </div>
+                <div class="theme-switch-wrapper">
+                    <span id="theme-icon">🌙</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="themeCheckbox">
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                <button class="join-btn" onclick="openDashboard()">PARTNER LOGIN</button>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">● HYPER-LOCAL APPAREL NETWORK ●</div>
+            <h1>Your Style.<br><span class="gradient-text">Verified Locally.</span></h1>
+            <p>Browse premium textiles from artisan shops nearby. Lock your choice for a 24-hour trial and verify the
+                quality in person.</p>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search fabrics, shops, or styles...">
+                <select id="categoryFilter">
+                    <option value="all">All Genders</option>
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                    <option value="kids">Kids</option>
+                </select>
+                <select id="fabricFilter">
+                    <option value="all">All Fabrics</option>
+                    <option value="Cotton">Cotton</option>
+                    <option value="Silk">Silk</option>
+                    <option value="Linen">Linen</option>
+                    <option value="Denim">Denim</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <div class="container how-it-works">
+        <div class="steps-grid">
+            <div class="step-card">
+                <span class="step-icon">🔍</span>
+                <h3 class="step-title">Find Locally</h3>
+                <p class="step-desc">Search premium fabrics from artisan shops in your city.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-icon">🔒</span>
+                <h3 class="step-title">Lock Inventory</h3>
+                <p class="step-desc">Reserve items online for 24 hours. No payment needed.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-icon">👕</span>
+                <h3 class="step-title">Try In-Store</h3>
+                <p class="step-desc">Visit the shop, feel the fabric, and buy only if you love it.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="reviews-strip">
+        <div class="container reviews-container">
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p class="review-text">"Found the perfect Saree in 5 minutes. The 24-hour lock gave me peace of mind."
+                </p>
+                <span class="reviewer">— M Yazin.</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p class="review-text">"Support local shops without driving all day. The fabric quality was exactly as
+                    described."</p>
+                <span class="reviewer">— Samual S.</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p class="review-text">"Locked it online, tried it in-store, bought it instantly. Best shopping
+                    experience!"</p>
+                <span class="reviewer">— Sayooj KC.</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="filter-controls">
+            <div class="quick-tags">
+                <span class="tag-chip active" id="chip-all" onclick="setQuickFilter('all')">All Styles</span>
+                <span class="tag-chip" id="chip-Silk" onclick="setQuickFilter('Silk')">Premium Silk</span>
+                <span class="tag-chip" id="chip-Linen" onclick="setQuickFilter('Linen')">Summer Linen</span>
+                <span class="tag-chip" id="chip-Cotton" onclick="setQuickFilter('Cotton')">Daily Cotton</span>
+            </div>
+            <select id="sortPrice" class="sort-dropdown">
+                <option value="none">Sort By: Featured</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+            </select>
+        </div>
+    </div>
+
+
+    <main class="container">
+        <div id="productGrid" class="product-grid"></div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-text">
+                        <span class="white-text">Try<span class="orange">Local</span></span>
+                        <small class="tagline">FIT GUARANTEED</small>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>DIRECTORY</h4>
+                <ul>
+                    <li><a href="#" onclick="openShopsModal()">ALL SHOPS</a></li>
+                    <li><a href="#">ACTIVE MAP</a></li>
+                    <li><a href="#">GEN-AI STYLIST</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>PARTNER</h4>
+                <ul>
+                    <li><a href="#" onclick="openDashboard()">SELL LOCALLY</a></li>
+                    <li><a href="#" onclick="openDashboard()">PORTAL</a></li>
+                    <li><a href="#" onclick="openInsightsModal()">INSIGHTS</a></li>
+                </ul>
+            </div>
+            <div class="footer-col subscribe-col">
+                <h4>SUBSCRIBE</h4>
+                <p>GET LOCAL DROPS IN YOUR INBOX.</p>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Email Address">
+                    <button class="join-submit">JOIN</button>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 TRYLOCAL ECOSYSTEMS. BUILT FOR COMMUNITIES.</p>
+            <div class="footer-legal">
+                <a href="#">PRIVACY</a> <a href="#">TERMS</a> <a href="#">MAPS</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="dashboardModal" class="modal hidden">
+        <div class="modal-content dashboard-content">
+            <span class="close-modal" onclick="closeDashboard()">×</span>
+            <h2>Tradition Silk House</h2>
+
+            <div class="stats-grid">
+                <!-- Injected via JS -->
+            </div>
+
+            <div class="recent-section">
+                <div class="section-title">
+                    <span>LATEST LOCKS (LIVE)</span>
+                    <span style="color:var(--primary-orange); cursor:pointer;">View All</span>
+                </div>
+                <div class="activity-list">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+
+            <button class="btn-main" style="margin-top: 20px;">+ Add New Inventory Item</button>
+        </div>
+    </div>
+
+
+    <!-- SHOPS LIST MODAL -->
+    <div id="shopsModal" class="modal hidden">
+        <div class="modal-content shops-content">
+            <span class="close-modal-left" onclick="closeShopsModal()">×</span>
+            <h2>Partner Shops</h2>
+            <div id="shopsList" class="shops-list">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- INSIGHTS MODAL -->
+    <div id="insightsModal" class="modal hidden">
+        <div class="modal-content shops-content"> <!-- Reusing shops-content for generic sizing -->
+            <span class="close-modal-left" onclick="closeInsightsModal()">×</span>
+            <h2>Local Market Insights</h2>
+            <div class="insight-grid">
+
+                <div class="insight-card">
+                    <h3>Trending Fabrics (This Week)</h3>
+                    <div class="trend-item">
+                        <div class="trend-label"><span>Linen</span> <span>+40%</span></div>
+                        <div class="trend-bar-bg">
+                            <div class="trend-bar-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="trend-item">
+                        <div class="trend-label"><span>Raw Silk</span> <span>+15%</span></div>
+                        <div class="trend-bar-bg">
+                            <div class="trend-bar-fill" style="width: 55%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <h3>Price Watch (Avg.)</h3>
+                    <div class="insight-stat-row">
+                        <span>Cotton Shirt</span>
+                        <div style="text-align:right">
+                            <b>₹950</b> <br> <span class="trend-down">▼ 5%</span>
+                        </div>
+                    </div>
+                    <div class="insight-stat-row">
+                        <span>Silk Saree</span>
+                        <div style="text-align:right">
+                            <b>₹6,200</b> <br> <span class="trend-up">▲ 12%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- AI STYLIST WIDGET -->
+    <div class="ai-fab-container">
+        <div class="ai-tooltip">Do you need any help with choosing the right outfit?</div>
+        <div class="ai-fab" onclick="toggleChat()">✨</div>
+    </div>
+
+    <div id="chatWindow" class="chat-window hidden">
+        <div class="chat-header">
+            <h3>Quick Filter</h3>
+            <span style="cursor:pointer" onclick="toggleChat()">×</span>
+        </div>
+        <div id="chatBody" class="chat-messages">
+            <div class="message bot-msg">
+                Hi! I'm your local fashion expert. Tell me what you're looking for! <br><br>
+                Try asking: <br>
+                <i>"Outfit for a wedding"</i> or <br>
+                <i>"Summer linen clothes"</i>
+            </div>
+        </div>
+        <div class="chat-options-area">
+            <div class="chat-options-grid">
+                <div class="chat-option-btn" onclick="handleOptionClick('Wedding')">💍 Wedding</div>
+                <div class="chat-option-btn" onclick="handleOptionClick('Summer')">☀️ Summer</div>
+                <div class="chat-option-btn" onclick="handleOptionClick('Office')">💼 Office</div>
+                <div class="chat-option-btn" onclick="handleOptionClick('Kids')">👶 Kids</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
