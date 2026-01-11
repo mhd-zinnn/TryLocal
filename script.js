@@ -1,5 +1,5 @@
 const products = [
-    { id: 1, name: "Banarasi Silk Saree", category: "women", fabric: "Silk", priceRange: "₹4,500 – ₹8,200", shop: "Tradition Silk", phone: "919000000001", img: "images/BSaree.jpg", sizes: "Free Size", colors: "Red, Gold" },
+    { id: 1, name: "Banarasi Silk Saree", category: "women", fabric: "Silk", priceRange: "₹4,500 – ₹8,200", shop: "Tradition Silk", phone: "919000000001", img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ0h2bddL3L_fRWxXXnavV6VTUxgt59_yKwJx7MkFRxHJWDU9cnCI-Vl1M3BUepYpK7hjSHzqee-fD3K5LXwYpQMVHeHt6akFvNerK9LiImxJVyg9jmBpe-sg", sizes: "Free Size", colors: "Red, Gold" },
     { id: 2, name: "Floral Summer Dress", category: "women", fabric: "Cotton", priceRange: "₹1,100 – ₹1,500", shop: "Aura Boutique", phone: "919000000002", img: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=600", sizes: "S, M, L", colors: "Floral" },
     { id: 3, name: "Embroidered Silk Kurti", category: "women", fabric: "Silk", priceRange: "₹1,500 – ₹2,500", shop: "Grace Boutique", phone: "919000000003", img: "images/ESK.webp", sizes: "M, L, XL", colors: "Navy Blue" },
     { id: 4, name: "Linen Tunic Top", category: "women", fabric: "Linen", priceRange: "₹1,100 – ₹1,500", shop: "Natural Fibers", phone: "919000000004", img: "images/LTT.jpg", sizes: "M, L", colors: "Off-White" },
@@ -405,3 +405,4 @@ function closeInsightsModal() {
 
 
 render(products);
+
