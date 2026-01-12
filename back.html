@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | TryLocal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+
+    <!-- CURTAIN OVERLAY -->
+    <div class="page-curtain">
+        <div class="curtain-panel curtain-left">
+            <div class="curtain-logo-split">
+                <span>Try<span class="orange">Local</span></span>
+            </div>
+        </div>
+        <div class="curtain-panel curtain-right">
+            <div class="curtain-logo-split">
+                <span>Try<span class="orange">Local</span></span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-nav">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <span>Try<span class="orange">Local</span></span>
+            </div>
+            <nav class="desktop-nav">
+                <div class="location-pill">
+                    <span class="location-icon">📍</span>
+                    <span id="userLocation">Angamaly, Kerala</span>
+                </div>
+                <div class="theme-switch-wrapper">
+                    <span id="theme-icon">🌙</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="themeCheckbox">
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                <button class="join-btn" onclick="openDashboard()">PARTNER LOGIN</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" style="padding: 40px 0;">
+        <h1>Full Catalogue</h1>
+        <p style="color:var(--text-dim); margin-bottom: 30px;">Browse all available inventory from our partner shops.
+        </p>
+
+        <!-- This container is targeted by renderList() in script.js -->
+        <div id="productList"></div>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="index.html" class="btn-main"
+                style="text-decoration: none; display: inline-block; width: auto; padding: 15px 40px;">Back to Home</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-text">
+                        <span class="white-text">Try<span class="orange">Local</span></span>
+                        <small class="tagline">FIT GUARANTEED</small>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>DIRECTORY</h4>
+                <ul>
+                    <li><a href="#" onclick="openShopsModal()">ALL SHOPS</a></li>
+                    <li><a href="#">ACTIVE MAP</a></li>
+                    <li><a href="#">GEN-AI STYLIST</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>PARTNER</h4>
+                <ul>
+                    <li><a href="#" onclick="openDashboard()">SELL LOCALLY</a></li>
+                    <li><a href="#" onclick="openDashboard()">PORTAL</a></li>
+                    <li><a href="#" onclick="openInsightsModal()">INSIGHTS</a></li>
+                </ul>
+            </div>
+            <div class="footer-col subscribe-col">
+                <h4>SUBSCRIBE</h4>
+                <p>GET LOCAL DROPS IN YOUR INBOX.</p>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Email Address">
+                    <button class="join-submit">JOIN</button>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 TRYLOCAL ECOSYSTEMS. BUILT FOR COMMUNITIES.</p>
+            <div class="footer-legal">
+                <a href="#">PRIVACY</a> <a href="#">TERMS</a> <a href="#">MAPS</a> <a
+                    href="https://www.instagram.com/ieeekerala/" target="_blank">INSTAGRAM</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include the same script to reuse logic and data -->
+    <script src="script.js"></script>
+    <script>
+        // Trigger Curtain
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.classList.add('curtain-open');
+            }, 500); // Short delay to ensure logo is seen
+        });
+    </script>
+</body>
+
+</html>
